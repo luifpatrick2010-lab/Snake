@@ -2,24 +2,25 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="shortcut icon" href="./images/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/stylesheet.css">
     <title>Snake Fake</title>
 </head>
 <body>
-    <div class="stats" id="stats"></div>  
-        <div id="highscore">Highscore</div>
-        <div id="surviveTime">Zeit am Leben</div>
-        <div id="lastScore">Letzer Score</div>
-    </div>
+    <table class="stats" id="idstats">
+        <tr>
+            <td id="highscore">Highscore</td>
+            <td id="lastScore">Letzter Score</td>
+        </tr>
+    </table>
 
-    <canvas id="game" width="900" height="900"> //Zeichenfläche für Javascript, wichtig für Snake
+    <canvas id="game" width="800px" height="800px"></canvas>     <!--Zeichenfläche für Javascript, wichtig für Snake-->
         
-    </canvas>
     
-    <div class="buttons">
-        <button id="idbutton"> Start Game </button>
-    </div>
+    
+    
+        <button class="buttons "id="idbutton"> Play </button>
     
 
 

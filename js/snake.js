@@ -4,7 +4,6 @@ document.getElementById("idbutton").addEventListener("click", gameStart);
 
 const lastScore = document.getElementById("lastScore");
 const highscore = document.getElementById("highscore");
-const surviveTime = document.getElementById("surviveTime");
 
 const canvas = document.getElementById("game");
 const ctx = canvas.getContext("2d");
