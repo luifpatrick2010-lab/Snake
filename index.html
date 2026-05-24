@@ -7,10 +7,18 @@
     <title>Snake Fake</title>
 </head>
 <body>
-    <div class="stats" id="stats"></div> // Highscore, Zeit am Leben, Letzter Score>
+    <div class="stats" id="stats"></div>  
+        <div id="highscore">Highscore</div>
+        <div id="surviveTime">Zeit am Leben</div>
+        <div id="lastScore">Letzer Score</div>
     </div>
-    <div class="buttons" id="idbuttons">
-        <button onclick="gamestart">Play</button>
+
+    <canvas id="game" width="900" height="900"> //Zeichenfläche für Javascript, wichtig für Snake
+        
+    </canvas>
+    
+    <div class="buttons">
+        <button id="idbutton"> Start Game </button>
     </div>
     
 
