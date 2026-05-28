@@ -9,27 +9,23 @@
     <title>Snake Fake</title>
 </head>
 <body>
-    <table class="stats" id="idstats">
-        <tr>
-            <td id="highscore">Highscore</td>
-            <td id="lastScore">Letzter Score</td>
-        </tr>
-    </table>
-
+    <div class="startscreen">
+        <div class="backshadow">
+            <table class="stats" id="idstats">
+                <tr>
+                    <td id="highscore">Highscore</td>
+                    <td id="lastScore">Letzter Score</td>
+                </tr>
+            </table>
+            <button onclick="gameStart" class="buttons "id="idbutton"> Play </button>
+        </div>
+    </div>
+    <div class="gamescreen">
     <canvas id="game" width="800px" height="800px"></canvas>     <!--Zeichenfläche für Javascript, wichtig für Snake-->
         
+    </div>
     
     
-    
-        <button class="buttons "id="idbutton"> Play </button>
-    
-
-
-
-
-
-
-
 
     <script src="./js/snake.js"></script>
 </body>

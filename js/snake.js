@@ -1,4 +1,8 @@
 "strict mode";
+function gameStart() {
+    setInterval(drawGame, 100);
+}
+
 document.getElementById("idbutton").addEventListener("click", gameStart);
 
 
@@ -58,6 +62,3 @@ function drawGame() {
     drawSnake();
 }
 
-function gameStart() {
-    setInterval(drawGame, 100);
-}
