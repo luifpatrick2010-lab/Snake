@@ -25,21 +25,30 @@ canvas {
     background-repeat: no-repeat;
 }
 
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0, 0, 0, 0.4);
+}
+
 /* Menü */
 
 .backshadow {
     width: 700px;
     height: 180px;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
 
     border-radius: 20px;
 
-    background: rgba(0, 0, 0, 0.5);
-
-    backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .score-box {
@@ -53,11 +62,6 @@ canvas {
 
     color: white;
 
-    text-shadow:
-        -2px -2px 0 black,
-         2px -2px 0 black,
-        -2px  2px 0 black,
-         2px  2px 0 black;
 }
 
 .menu-row {
@@ -67,6 +71,50 @@ canvas {
 
     justify-content: space-evenly;
     align-items: center;
+}
+
+.menu-grid {
+    width: 100%;
+    height: 100%;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+
+    grid-template-areas:
+        "highscore lastscore"
+        "play play";
+
+    padding: 20px;
+}
+
+.highscore {
+    grid-area: highscore;
+    text-align: left;
+    margin-left: 20px;
+}
+
+.lastscore {
+    grid-area: lastscore;
+    text-align: right;
+    margin-right: 20px;
+}
+
+.play {
+    grid-area: play;
+    justify-self: start; /* links unten */
+    align-self: end;
+}
+
+.label {
+    font-size: 18px;
+    color: white;
+}
+
+.value {
+    font-size: 32px;
+    color: white;
 }
 
 .gamescreen {

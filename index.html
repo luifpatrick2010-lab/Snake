@@ -8,27 +8,31 @@
 </head>
 <body>
     <div class="startscreen">
+        <div class="overlay"></div> 
 
     <div class="backshadow">
 
-        <div class="menu-row">
+    <div class="menu-grid">
 
-            <div class="score-box" id="highscore">
-                Highscore: 0
-            </div>
-
-            <button onclick="gameStart()" class="buttons" id="idbutton">
-                Play
-            </button>
-
-            <div class="score-box" id="lastScore">
-                Latest Score: 0
-            </div>
-
+        <div class="highscore">
+            <div class="value" id="highscore">0</div>
+            <div class="label">Highscore</div>
+            
         </div>
+
+        <div class="lastscore">
+            <div class="value" id="lastScore">0</div>
+            <div class="label">Latest Score</div>
+            
+        </div>
+
+        <button onclick="gameStart()" class="buttons play">
+            Play
+        </button>
 
     </div>
 
+</div>
 </div>
 
 
