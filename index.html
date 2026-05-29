@@ -8,16 +8,28 @@
 </head>
 <body>
     <div class="startscreen">
-        <div class="backshadow">
-            <table class="stats" id="idstats">
-                <tr>
-                    <td id="highscore">Highscore</td>
-                    <td id="lastScore">Letzter Score</td>
-                </tr>
-            </table>
-            <button onclick="gameStart" class="buttons "id="idbutton"> Play </button>
+
+    <div class="backshadow">
+
+        <div class="menu-row">
+
+            <div class="score-box" id="highscore">
+                Highscore: 0
+            </div>
+
+            <button onclick="gameStart()" class="buttons" id="idbutton">
+                Play
+            </button>
+
+            <div class="score-box" id="lastScore">
+                Latest Score: 0
+            </div>
+
         </div>
+
     </div>
+
+</div>
 
 
     <!-- Spiel -->
