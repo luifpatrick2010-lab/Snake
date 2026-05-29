@@ -1,32 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
     <meta charset="UTF-8">
-    <link rel="shortcut icon" href="./images/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./images/favicon.ico" />
     <link rel="stylesheet" href="./css/stylesheet.css">
-    <meta name="description" content="">
-    <title>Snake Fake</title>
 </head>
 <body>
-    <div class="startscreen">
+
+
+    <!-- Startscreen -->
+    <div class="startscreen" id="startscreen">
         <div class="backshadow">
-            <table class="stats" id="idstats">
+            <table class="stats" id="stats">
                 <tr>
-                    <td id="highscore">Highscore</td>
-                    <td id="lastScore">Letzter Score</td>
+                    <td id="highscore">Highscore: 0</td>
+                    <td id="lastScore">Last Score: 0</td>
                 </tr>
             </table>
-            <button onclick="gameStart" class="buttons "id="idbutton"> Play </button>
+            <button class="buttons" id="idbutton">
+                Play
+            </button>
         </div>
     </div>
-    <div class="gamescreen">
-    <canvas id="game" width="800px" height="800px"></canvas>     <!--Zeichenfläche für Javascript, wichtig für Snake-->
-        
-    </div>
-    
-    
 
+
+    <!-- Spiel -->
+    <div class="gamescreen" id="gamescreen">
+         <canvas id="game" width="800" height="800"></canvas>
+    </div>
     <script src="./js/snake.js"></script>
+
 </body>
 </html>
