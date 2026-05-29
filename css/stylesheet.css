@@ -1,102 +1,77 @@
 body {
+   
     margin: 0;
-    overflow: hidden;
-
     display: flex;
-    flex-direction: column;
-    justify-content: center;
 
+    justify-content: center;
+    
     height: 100vh;
 }
 canvas {
     background-color: green;
     
 }
+
+
+
+/* STARTSCREEN */
 .startscreen {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-image: url("../images/Schllllange.png");
+  background-size: cover;
+  background-position: center;
+}
+
+/* Menü */
+
+.backshadow {
+    width: 300px;
+    padding: 20px;
+    border-radius: 15px;          /* abgerundete Ecken */
+    background: rgba(0, 0, 0, 0.5); /* transparentes Schwarz */
+    color: rgb(0, 0, 0);                 /* Textfarbe */
+    backdrop-filter: blur(5px);   /* optional: leichter Glas-Effekt */
+  }
+
+.gamescreen {
+    display: none;
 
     width: 100vw;
     height: 100vh;
 
-    background-image: url("../images/Schllllange.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
+    background-color: black;
 
-.backshadow {
-    width: 700px;
-    height: 180px;
-
-    display: flex;
     justify-content: center;
     align-items: center;
-
-    border-radius: 20px;
-
-    background: rgba(0, 0, 0, 0.5);
-
-    backdrop-filter: blur(5px);
 }
 
-.menu-row {
-    width: 100%;
 
-    display: flex;
+/* Canvas */
 
-    justify-content: space-evenly;
-    align-items: center;
+#game {   
+    background-color: #111;
+    border: 4px solid white;
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.4);
 }
 
-.score-box {
-    width: 180px;
 
-    text-align: center;
-
-    font-family: Arial, Helvetica, sans-serif;
-
-    font-size: 32px;
-
-    color: white;
-
-    text-shadow:
-        -2px -2px 0 black,
-         2px -2px 0 black,
-        -2px  2px 0 black,
-         2px  2px 0 black;
-}
-
-.gamescreen {
-    display: none;
-}
+/* Button */
 
 .buttons {
     background-color: rgb(8, 75, 192);
-
-    width: 160px;
-    height: 80px;
-
-    border-radius: 12px;
+    width: 100px;
+    height: 50px;
+    border-radius: 8px;
     border-width: 0px;
-
     text-align: center;
-
     font-family: Helvetica, sans-serif;
-
-    color: white;
-
-    font-size: 36px;
-
-    cursor: pointer;
-
-    transition: 0.2s;
-}
-
-.buttons:hover {
-    transform: scale(1.05);
+    color:white;
+    font-size: 25px;
+    
 }
 
 .stats  {
