@@ -5,41 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="./images/favicon.ico" />
     <link rel="stylesheet" href="./css/stylesheet.css">
+    <title>Snake Fake</title>
 </head>
 <body>
-    <div class="startscreen">
-        <div class="overlay"></div> 
 
-    <div class="backshadow">
+    <!-- Startscreen -->
+    <div class="startscreen" id="startscreen">
+        <div class="backshadow">
+            <table class="stats" id="stats">
+                <tr>
+                    <td id="highscore">Highscore: 0</td>
+                    <td id="lastScore">Last Score: 0</td>
+                </tr>
+            </table>
 
-    <div class="menu-grid">
-
-        <div class="highscore">
-            <div class="value" id="highscore">0</div>
-            <div class="label">Highscore</div>
-            
+            <button class="buttons" id="idbutton">
+                Play
+            </button>
         </div>
-
-        <div class="lastscore">
-            <div class="value" id="lastScore">0</div>
-            <div class="label">Latest Score</div>
-            
-        </div>
-
-        <button onclick="gameStart()" class="buttons play">
-            Play
-        </button>
-
     </div>
-
-</div>
-</div>
-
 
     <!-- Spiel -->
     <div class="gamescreen" id="gamescreen">
-         <canvas id="game" width="800" height="800"></canvas>
+
+        <canvas id="game"></canvas>
+
+        <!-- Game Over Overlay -->
+        <div id="gameOverScreen">
+            <button id="retryButton">
+                Retry
+            </button>
+        </div>
+
     </div>
+
     <script src="./js/snake.js"></script>
 
 </body>

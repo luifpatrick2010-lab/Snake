@@ -1,23 +1,35 @@
 body {
+   
     margin: 0;
-    height: 100vh;
-}
 
-canvas {
-    background-color: green;
-    
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    background-color: black;
+
+    overflow: hidden;
 }
 
 
 
 /* STARTSCREEN */
 .startscreen {
-    width: 100%;
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100vw;
     height: 100vh;
+
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
+    align-items: center;
 
     background-image: url("../images/Schllllange.png");
     background-size: cover;
@@ -25,97 +37,42 @@ canvas {
     background-repeat: no-repeat;
 }
 
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+   
+/*
+display: flex;
+    flex-direction: column;
 
-    background: rgba(0, 0, 0, 0.4);
-}
+    align-items: center;
+    justify-content: center;
 
+    width: 100vw;
+    height: 100vh;
+
+    
+    background-size: cover;
+    background-position: center;
+background-image: url("../images/Schllllange.png");
+*/
 /* Menü */
 
 .backshadow {
-    width: 700px;
-    height: 180px;
+    width: 300px;
+
+    padding: 20px;
+
+    border-radius: 15px;
 
     background: rgba(0, 0, 0, 0.5);
+
     backdrop-filter: blur(5px);
-
-    border-radius: 20px;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.score-box {
-    width: 180px;
 
     text-align: center;
 
-    font-family: Arial, Helvetica, sans-serif;
-
-    font-size: 32px;
-
-    color: white;
-
-}
-
-.menu-row {
-    width: 100%;
-
-    display: flex;
-
-    justify-content: space-evenly;
-    align-items: center;
-}
-
-.menu-grid {
-    width: 100%;
-    height: 100%;
-
-    display: grid;
-
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-
-    grid-template-areas:
-        "highscore lastscore"
-        "play play";
-
-    padding: 20px;
-}
-
-.highscore {
-    grid-area: highscore;
-    text-align: left;
-    margin-left: 20px;
-}
-
-.lastscore {
-    grid-area: lastscore;
-    text-align: right;
-    margin-right: 20px;
-}
-
-.play {
-    grid-area: play;
-    justify-self: start; /* links unten */
-    align-self: end;
-}
-
-.label {
-    font-size: 18px;
     color: white;
 }
 
-.value {
-    font-size: 32px;
-    color: white;
-}
+
+/* Spielscreen */
 
 .gamescreen {
     display: none;
@@ -144,19 +101,16 @@ canvas {
 .buttons {
     background-color: rgb(8, 75, 192);
 
-    width: 160px;
-    height: 80px;
+    width: 120px;
+    height: 50px;
 
-    border-radius: 12px;
-    border-width: 0px;
+    border-radius: 8px;
 
-    text-align: center;
-
-    font-family: Helvetica, sans-serif;
+    border: none;
 
     color: white;
 
-    font-size: 36px;
+    font-size: 25px;
 
     cursor: pointer;
 
@@ -167,10 +121,52 @@ canvas {
     transform: scale(1.05);
 }
 
-.stats  {
-    font-family: Arial, Helvetica, sans-serif;
+
+/* Tabelle */
+
+.stats {
+    width: 100%;
+
+    color: white;
+
+    margin-bottom: 20px;
+
+    text-align: center;
+
+    font-size: 20px;
+}
+
+/* Game Over Overlay */
+
+#gameOverScreen {
+    display: none;
+    position: absolute;
+    inset: 0;
+
+    justify-content: center;
     align-items: center;
-    font-size: 2vw;
 
+    background: rgba(0, 0, 0, 0.6);
 
+    z-index: 1000;
+}
+
+/* Retry Button */
+
+#retryButton {
+    padding: 15px 40px;
+
+    font-size: 24px;
+    font-weight: bold;
+
+    border: none;
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+#retryButton:hover {
+    transform: scale(1.05);
 }
