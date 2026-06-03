@@ -44,6 +44,32 @@
         Alle Inhalte wurden sorgfältig mit KI erstellt, jedoch ohne Gewähr auf Richtigkeit, Verpflegung oder gute Noten.</p>
     </div>
 
+    <div class="settings" id="settings">
+    <button class="settings-close" onclick="closeSettings()" aria-label="Schließen">✕</button>
+
+    <h2>Settings</h2>
+
+    <div class="setting-group">
+        <label for="difficulty">Difficulty</label>
+
+        <select id="difficulty">
+            <option>Easy</option>
+            <option>Medium</option>
+            <option>Hard</option>
+        </select>
+    </div>
+
+    <div class="setting-group">
+        <label for="snakeColor">Snake Color</label>
+
+        <input type="color" id="snakeColor" value="#00ff00">
+    </div>
+
+    <button class="saveSettings">
+        Save Settings
+    </button>
+    </div>
+
     <!-- Spiel -->
     <div class="gamescreen" id="gamescreen">
 

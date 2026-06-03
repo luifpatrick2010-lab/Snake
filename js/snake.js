@@ -98,7 +98,7 @@ window.onload = function () {
 
         for (let i = 0; i < snake.length; i++) {
 
-            ctx.fillStyle = "green";
+            ctx.fillStyle = "black";
 
             ctx.fillRect(
                 snake[i].x,
@@ -120,24 +120,53 @@ window.onload = function () {
         );
     }
 
-    function drawGame() {
+    function drawBoard() {
 
-        ctx.clearRect(0, 0, snakeBox.width, snakeBox.height);
+    for (let row = 0; row < snakeBox.height / box; row++) {
 
-        moveSnake();
+        for (let col = 0; col < snakeBox.width / box; col++) {
 
-        if (checkCollision()) {
+            if ((row + col) % 2 === 0) {
+                ctx.fillStyle = "#3d8b3d";
+            } else {
+                ctx.fillStyle = "#2f6b2f";
+            }
 
-            clearInterval(game);
-
-            gameOverScreen.style.display = "flex";
-
-            return;
+            ctx.fillRect(
+                col * box,
+                row * box,
+                box,
+                box
+            );
         }
-
-        drawApple();
-        drawSnake();
     }
+}
+
+function drawGame() {
+
+    ctx.clearRect(
+        0,
+        0,
+        snakeBox.width,
+        snakeBox.height
+    );
+
+    drawBoard();
+
+    moveSnake();
+
+    if (checkCollision()) {
+
+        clearInterval(game);
+
+        gameOverScreen.style.display = "flex";
+
+        return;
+    }
+
+    drawApple();
+    drawSnake();
+}
 
     document.addEventListener("keydown", changeDirection);
 
@@ -216,4 +245,20 @@ function impress() {
 function closeImpress() {
     const el = document.querySelector(".impressum");
     if (el) el.style.display = "none";
+}
+
+document.getElementById("edit").addEventListener("click", openSettings);
+
+function openSettings() {
+
+    document.querySelector(".backshadow").style.display = "none";
+
+    document.getElementById("settings").style.display = "flex";
+}
+
+function closeSettings() {
+
+    document.getElementById("settings").style.display = "none";
+
+    document.querySelector(".backshadow").style.display = "block";
 }
