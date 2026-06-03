@@ -207,3 +207,13 @@ window.onload = function () {
         gameStart();
     }
 };
+
+function impress() {
+    document.querySelector(".impressum").style.display = "flex";
+
+}
+
+function closeImpress() {
+    const el = document.querySelector(".impressum");
+    if (el) el.style.display = "none";
+}
