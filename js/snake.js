@@ -98,7 +98,7 @@ window.onload = function () {
 
         for (let i = 0; i < snake.length; i++) {
 
-            ctx.fillStyle = "black";
+            ctx.fillStyle = "blue";
 
             ctx.fillRect(
                 snake[i].x,
